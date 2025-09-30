@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-
+// 改變圖片路徑開始
 import Nav from '../component/nav.jsx';
 import '../sass/scss/home.scss';
 
@@ -87,17 +87,17 @@ const Home = () => {
             <section className='homeall'>
                 <section className='home-logo'>
                     <figure className='logo'>
-                        <img src="/logo.svg" alt="品牌 Logo" />
+                        <img src="./logo.svg" alt="品牌 Logo" />
                     </figure>
                 </section>
                 <Nav />
                 <section className='home-p1' id='p1'>
                     <section className='home-bg'>
                         <figure className='bg'>
-                            <img src="/img-home/bg.png" alt="背景照片" />
+                            <img src="./img-home/bg.png" alt="背景照片" />
                         </figure>
                         <figure className={`p1-logo ${p1LogoVisible ? 'logo-fade-in' : 'logo-initial'}`}>
-                            <img src="/logo.svg" alt="品牌 Logo" />
+                            <img src="./logo.svg" alt="品牌 Logo" />
                         </figure>
                     </section>
                     <div
@@ -112,8 +112,8 @@ const Home = () => {
                                 ref={p1FramedRef} // 綁定 ref 到產品容器
                                 className={`p1-framed ${p1FramedInView ? 'active-p0' : ''}`}
                             >
-                                <img src="/img-home/p1.png" alt="產品一" className="p1-img" />
-                                <img src="/img-home/p0.svg" alt="floufloü" className="p0-overlay p0-bottom-left" />
+                                <img src="./img-home/p1.png" alt="產品一" className="p1-img" />
+                                <img src="./img-home/p0.svg" alt="floufloü" className="p0-overlay p0-bottom-left" />
                                 <h3>SATURN 土星</h3>
                                 <div className='btn1'>
                                     <button className='top-1'>
@@ -126,7 +126,7 @@ const Home = () => {
                         </a>
                         <a href="/p2-link">
                             <figure className='p2-framed'>
-                                <img src="/img-home/p2.png" alt="產品二" />
+                                <img src="./img-home/p2.png" alt="產品二" />
                                 <h3>POCHONTAS 風中奇緣</h3>
                                 <div className='btn2'>
                                     <button className='top-2'>
@@ -142,8 +142,8 @@ const Home = () => {
                                 ref={p3FramedRef} // 綁定 ref 到產品容器
                                 className={`p3-framed ${p3FramedInView ? 'active-p0' : ''}`}
                             >
-                                <img src="/img-home/p3.png" alt="產品三" className="p3-img" />
-                                <img src="/img-home/p0.svg" alt="floufloü" className="p0-overlay p0-right-middle" />
+                                <img src="./img-home/p3.png" alt="產品三" className="p3-img" />
+                                <img src="./img-home/p0.svg" alt="floufloü" className="p0-overlay p0-right-middle" />
                                 <h3>AFFOGATO 阿芙佳朵</h3>
                                 <div className='btn3'>
                                     <button className='top-3'>
@@ -160,17 +160,17 @@ const Home = () => {
                             className={`p2-photo-1 ${p2Photo1InView ? 'active' : ''}`}
                             ref={p2Photo1Ref}
                         >
-                            <img src="/img-home/p2-1.png" alt="照片1" className="p2-1" />
-                            <img src="/img-home/p2-2.png" alt="照片2" className="p2-2" />
-                            <img src="/img-home/p2-3.png" alt="照片3" className="p2-3" />
+                            <img src="./img-home/p2-1.png" alt="照片1" className="p2-1" />
+                            <img src="./img-home/p2-2.png" alt="照片2" className="p2-2" />
+                            <img src="./img-home/p2-3.png" alt="照片3" className="p2-3" />
                         </figure>
                         <figure
                             className={`p2-photo-2 ${p2Photo2InView ? 'active' : ''}`}
                             ref={p2Photo2Ref}
                         >
-                            <img src="/img-home/p2-4.png" alt="照片4" className="p2-2-1" />
-                            <img src="/img-home/p2-5.png" alt="照片5" className="p2-2-2" />
-                            <img src="/img-home/p2-6.png" alt="照片6" className="p2-2-3" />
+                            <img src="./img-home/p2-4.png" alt="照片4" className="p2-2-1" />
+                            <img src="./img-home/p2-5.png" alt="照片5" className="p2-2-2" />
+                            <img src="./img-home/p2-6.png" alt="照片6" className="p2-2-3" />
                         </figure>
                         <div className='p2-text'>
                             <h2 className='text-1'>narrative</h2>
@@ -182,10 +182,10 @@ const Home = () => {
                             <h2 className='text-7'>Elegance</h2>
                         </div>
                         <figure className='icon1'>
-                            <img src="/img-home/icon1.png" alt="" />
+                            <img src="./img-home/icon1.png" alt="" />
                         </figure>
                         <div className='icon2'>
-                            <img src="/img-home/icon2.png" alt="" />
+                            <img src="./img-home/icon2.png" alt="" />
                         </div>
                         <div className='p2-btn'>
                             <button className='more'>
@@ -197,27 +197,27 @@ const Home = () => {
                     </section>
                     <section className='p3-video'>
                         <video autoPlay muted loop playsInline>
-                            <source src="/img-home/output.mp4" type="video/mp4" />
+                            <source src="./img-home/output.mp4" type="video/mp4" />
                         </video>
                         <div className="video-overlay"></div>
                         <div className='border-video'></div>
                         <div className='logo-video'>
-                            <img src="/logo.svg" alt="品牌 Logo" />
+                            <img src="./logo.svg" alt="品牌 Logo" />
                         </div>
                         <div className='social-icons'>
                             <a href="https://www.instagram.com/gowiththeflouflou/" target="_blank" rel="noopener noreferrer">
                                 <div className='ig'>
-                                    <img src="/img-home/instagram.png" alt="Instagram" />
+                                    <img src="./img-home/instagram.png" alt="Instagram" />
                                 </div>
                             </a>
                             <a href="#" target="_blank" rel="noopener noreferrer">
                                 <div className='fb'>
-                                    <img src="/img-home/facebook.png" alt="Facebook" />
+                                    <img src="./img-home/facebook.png" alt="Facebook" />
                                 </div>
                             </a>
                             <a href="#" target="_blank" rel="noopener noreferrer">
                                 <div className='line'>
-                                    <img src="/img-home/line.png" alt="Line" />
+                                    <img src="./img-home/line.png" alt="Line" />
                                 </div>
                             </a>
                         </div>
@@ -236,7 +236,7 @@ const Home = () => {
                             <div className="border-with-icon-container">
                                 <div className="left-border"></div>
                                 <div className="icon-wrapper">
-                                    <img src="/img-home/icon4.png" alt="Icon" className="icon-on-border" />
+                                    <img src="./img-home/icon4.png" alt="Icon" className="icon-on-border" />
                                 </div>
                                 <div className="right-border"></div>
                             </div>
@@ -275,7 +275,7 @@ const Home = () => {
             {showScrollButton && (
                 <button className='scroll-to-top' onClick={scrollToTop}>
                     <div className='scroll-icon'>
-                        <img src="/img-home/top.png" alt="Scroll to Top" />
+                        <img src="./img-home/top.png" alt="Scroll to Top" />
                     </div>
                     <span className='scroll-text'>Scroll to top</span>
                 </button>
@@ -298,17 +298,17 @@ export default Home;
 //             <section className='homeall'>
 //                 <section className='home-logo'>
 //                     <figure className='logo'>
-//                         <img src="/logo.svg" alt="品牌 Logo" />
+//                         <img src="./logo.svg" alt="品牌 Logo" />
 //                     </figure>
 //                 </section>
 //                 <Nav />
 //                 <section className='home-p1' id='p1'>
 //                     <section className='home-bg'>
 //                         <figure className='bg'>
-//                             <img src="/img-home/bg.png" alt="背景照片" />
+//                             <img src="./img-home/bg.png" alt="背景照片" />
 //                         </figure>
 //                         <figure className='p1-logo'>
-//                             <img src="/logo.svg" alt="品牌 Logo" />
+//                             <img src="./logo.svg" alt="品牌 Logo" />
 //                         </figure>
 //                     </section>
 //                     <div className='swim'>
@@ -317,8 +317,8 @@ export default Home;
 //                     <section className='home-p1-photo'>
 //                         <a href="/p1-link">
 //                             <figure className='p1-framed'>
-//                                 <img src="/img-home/p1.png" alt="產品一" className="p1-img" />
-//                                 <img src="/img-home/p0.svg" alt="floufloü" className="p0-overlay p0-bottom-left" />
+//                                 <img src="./img-home/p1.png" alt="產品一" className="p1-img" />
+//                                 <img src="./img-home/p0.svg" alt="floufloü" className="p0-overlay p0-bottom-left" />
 //                                 <h3>SATURN 土星</h3>
 //                                 <div className='btn1'>
 //                                     <button className='top-1'>
@@ -333,7 +333,7 @@ export default Home;
 
 //                         <a href="/p2-link">
 //                             <figure className='p2-framed'>
-//                                 <img src="/img-home/p2.png" alt="產品二" />
+//                                 <img src="./img-home/p2.png" alt="產品二" />
 //                                 <h3>POCHONTAS 風中奇緣</h3>
 //                                 <div className='btn2'>
 //                                     <button className='top-2'>
@@ -347,8 +347,8 @@ export default Home;
 
 //                         <a href="/p3-link">
 //                             <figure className='p3-framed' >
-//                                 <img src="/img-home/p3.png" alt="產品三" className="p3-img" />
-//                                 <img src="/img-home/p0.svg" alt="floufloü" className="p0-overlay p0-right-middle" />
+//                                 <img src="./img-home/p3.png" alt="產品三" className="p3-img" />
+//                                 <img src="./img-home/p0.svg" alt="floufloü" className="p0-overlay p0-right-middle" />
 //                                 <h3>AFFOGATO 阿芙佳朵</h3>
 //                                 <div className='btn3'>
 //                                     <button className='top-3'>
@@ -362,14 +362,14 @@ export default Home;
 //                     </section>
 //                     <section className='home-p2' id='p2'>
 //                         <figure className='p2-photo-1'>
-//                             <img src="/img-home/p2-1.png" alt="照片1" className="p2-1" />
-//                             <img src="/img-home/p2-2.png" alt="照片2" className="p2-2" />
-//                             <img src="/img-home/p2-3.png" alt="照片2" className="p2-3" />
+//                             <img src="./img-home/p2-1.png" alt="照片1" className="p2-1" />
+//                             <img src="./img-home/p2-2.png" alt="照片2" className="p2-2" />
+//                             <img src="./img-home/p2-3.png" alt="照片2" className="p2-3" />
 //                         </figure>
 //                         <figure className='p2-photo-2'>
-//                             <img src="/img-home/p2-4.png" alt="照片4" className="p2-2-1" />
-//                             <img src="/img-home/p2-5.png" alt="照片5" className="p2-2-2" />
-//                             <img src="/img-home/p2-6.png" alt="照片6" className="p2-2-3" />
+//                             <img src="./img-home/p2-4.png" alt="照片4" className="p2-2-1" />
+//                             <img src="./img-home/p2-5.png" alt="照片5" className="p2-2-2" />
+//                             <img src="./img-home/p2-6.png" alt="照片6" className="p2-2-3" />
 //                         </figure>
 //                         <div className='p2-text'>
 //                             <h2 className='text-1'>narrative</h2>
@@ -381,10 +381,10 @@ export default Home;
 //                             <h2 className='text-7'>Elegance</h2>
 //                         </div>
 //                         <figure className='icon1'>
-//                             <img src="/img-home/icon1.png" alt="" />
+//                             <img src="./img-home/icon1.png" alt="" />
 //                         </figure>
 //                         <div className='icon2'>
-//                             <img src="/img-home/icon2.png" alt="" />
+//                             <img src="./img-home/icon2.png" alt="" />
 //                         </div>
 //                         <div className='p2-btn'>
 //                             <button className='more'>
@@ -408,46 +408,46 @@ export default Home;
 
 //                         {/* Logo 和背景方框層，放在最上層 */}
 //                         <div className='logo-video'>
-//                             <img src="/logo.svg" alt="品牌 Logo" />
+//                             <img src="./logo.svg" alt="品牌 Logo" />
 //                         </div>
 //                         <div className='social-icons'>
 //                             <a href="https://www.instagram.com/gowiththeflouflou/" target="_blank" rel="noopener noreferrer">
 //                                 <div className='ig'>
-//                                     <img src="/img-home/instagram.png" alt="Instagram" />
+//                                     <img src="./img-home/instagram.png" alt="Instagram" />
 //                                 </div>
 //                             </a>
 //                             <a href="#" target="_blank" rel="noopener noreferrer">
 //                                 <div className='fb'>
-//                                     <img src="/img-home/facebook.png" alt="Facebook" />
+//                                     <img src="./img-home/facebook.png" alt="Facebook" />
 //                                 </div>
 //                             </a>
 //                             <a href="#" target="_blank" rel="noopener noreferrer">
 //                                 <div className='line'>
-//                                     <img src="/img-home/line.png" alt="Line" />
+//                                     <img src="./img-home/line.png" alt="Line" />
 //                                 </div>
 //                             </a>
 //                         </div>
 //                     </section>
 //                     <section className='home-p4' id='p4'>
 //                         <figure className='ourstory'>
-//                             <img src="./img-home/OUR STORY.png" alt="" />
+//                             <img src="../img-home/OUR STORY.png" alt="" />
 //                         </figure>
 //                         <div className='about'>
 
 //                             <figure className='about-photo'>
-//                                 <img src="./img-home/logo-2.png" alt="" />
+//                                 <img src="../img-home/logo-2.png" alt="" />
 //                             </figure>
 //                             <div className="border-with-icon-container">
 //                                 <div className="left-border"></div>
 //                                 <div className="icon-wrapper">
-//                                     <img src="/img-home/icon4.png" alt="Icon" className="icon-on-border" />
+//                                     <img src="./img-home/icon4.png" alt="Icon" className="icon-on-border" />
 //                                 </div>
 //                                 <div className="right-border"></div>
 //                             </div>
 //                             <p>gowiththeflouflou 是一個以串珠手作項鍊為主的飾品品牌，誕生於對「溫度」與「故事」的渴望。<br /><br />flou 是 flora 與 ou 的名字結合，象徵我們之間的友情與創作緊密相連。我們相信，每一條項鍊不僅是飾品，更是一段柔軟、真摯的記憶，陪伴你走過日常，也點亮特別的時刻。<br /><br />品牌以粉色與米色為主調，傳遞溫柔與活力的氛圍。每件作品都由我們親手製作，注重細節與質感，期望你能在這裡，找到那條專屬於自己的項鍊。<br /><br />希望在這個角落，你能找到屬於自己的小小光芒，為日常增添一份溫柔與閃爍。</p>
 //                         </div>
 //                         <figure className='p4-photo'>
-//                             <img src="./img-home/shop.png" alt="" />
+//                             <img src="../img-home/shop.png" alt="" />
 //                         </figure>
 //                     </section>
 //                     <section className='footer'>
@@ -464,7 +464,7 @@ export default Home;
 //                             </div>
 //                         </div>
 //                         <figure className='bg-bottom'>
-//                             <img src="./img-home/bg-bottom.png" alt="" />
+//                             <img src="../img-home/bg-bottom.png" alt="" />
 //                             <div className='copy'>
 //                                 <p>© 2025 .gowiththeflouflou</p>
 //                             </div>
