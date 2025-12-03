@@ -1,0 +1,122 @@
+.member-main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden; // 避免圖片太大跑版
+
+    // ------------------------------------
+    // 背景層 (z-index: 0)
+    // ------------------------------------
+    .member-bg {
+        position: absolute; // 讓它脫離排版，浮在底層
+        top: 160px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0; // 設定為 0
+        pointer-events: none; // 讓滑鼠穿透
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // 填滿畫面
+            object-position: center;
+        }
+    }
+
+    // ------------------------------------
+    // 內容層 (z-index: 10) -> 關鍵修改！
+    // ------------------------------------
+    .content-wrapper {
+        position: relative; // 必須要有定位，z-index 才會生效
+        z-index: 10;        // 設定比 0 大，保證浮在上面
+        width: 100%;
+        height: 100%;
+    }
+
+    // Logo 設定 (維持原樣)
+    .item-logo {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        .logo { width: 100px; } 
+    }
+   
+
+.login-container {
+    // 這裡不用再寫 z-index 了，因為外層 content-wrapper 已經處理好了
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+
+     .logo2 {
+        width: 120px;
+}
+
+    .login-card {
+        width: 468px;
+        height: 488px;
+        background-color: #FFFAE8;
+        border: 1px solid #ECB8A9;
+        border-radius: 60px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        box-sizing: border-box;
+
+        .login-title {
+            font-size: 24px;
+            color: #777;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        .login-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .input-group {
+                width: 100%;
+                margin-bottom: 25px;
+                .input-field {
+                    width: 100%;
+                    height: 50px;
+                    padding: 0 15px;
+                    border: 1px solid #ECB8A9;
+                    border-radius: 25px;
+                    box-sizing: border-box; 
+                     &:focus {
+
+                            outline: none;
+                            border-color: #ECB8A9;
+                            box-shadow: 0 0 5px rgba(236, 184, 169, 0.5);
+                        }
+                    
+                }
+            }
+
+            .login-btn {
+                margin-top: 20px;
+                width: 50%;
+                height: 50px;
+                background-color: #ECB8A9;
+                color: #fff;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+
+                &:focus {
+
+                            box-shadow: 0 0 5px rgba(236, 184, 169, 0.5);
+                        }
+            }
+        }
+    }
+}
+}

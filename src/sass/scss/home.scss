@@ -10,28 +10,36 @@
     0% {
         transform: translateX(-100%) translateY(-100%) rotate(45deg);
     }
+
     100% {
         transform: translateX(100%) translateY(100%) rotate(45deg);
     }
 }
+
 @keyframes blinkEffect {
     0% {
         opacity: 1;
         filter: brightness(1); // 初始亮度
     }
+
     50% {
         opacity: 1.2;
         filter: brightness(1.2); // 亮度增強，模擬變白效果
     }
+
     100% {
         opacity: 1;
         filter: brightness(1); // 回到初始狀態
     }
 }
- html {
-    overflow-x: hidden; /* 隱藏水平滾動條 */
-    width: 100%;       /* 確保主體寬度為 100% */
+
+html {
+    overflow-x: hidden;
+    /* 隱藏水平滾動條 */
+    width: 100%;
+    /* 確保主體寬度為 100% */
 }
+
 .homeall {
     display: flex;
     flex-direction: column;
@@ -163,14 +171,15 @@
             left: -60%;
 
             clip-path: inset(0 0 0 100%);
-        transition: clip-path 2s ease-out;
+            transition: clip-path 2s ease-out;
         }
-         &.active-p0 {
-        .p0-overlay {
-            // 遮罩消失，SVG 從右到左顯現
-            clip-path: inset(0 0 0 0);
+
+        &.active-p0 {
+            .p0-overlay {
+                // 遮罩消失，SVG 從右到左顯現
+                clip-path: inset(0 0 0 0);
+            }
         }
-    }
 
         h3 {
             margin-top: 20px;
@@ -343,14 +352,15 @@
             transform: translateY(-50%);
 
             clip-path: inset(0 100% 0 0);
-        transition: clip-path 2s ease-out; 
+            transition: clip-path 2s ease-out;
         }
+
         &.active-p0 {
-        .p0-overlay {
-            // 遮罩消失，SVG 從右到左顯現
-            clip-path: inset(0 0 0 0);
+            .p0-overlay {
+                // 遮罩消失，SVG 從右到左顯現
+                clip-path: inset(0 0 0 0);
+            }
         }
-    }
 
         h3 {
             margin-top: 20px;
@@ -813,7 +823,7 @@ video {
     .ig img:hover,
     .fb img:hover,
     .line img:hover {
-         filter: sepia(0.8) hue-rotate(-20deg);
+        filter: sepia(0.8) hue-rotate(-20deg);
     }
 }
 
@@ -840,7 +850,7 @@ video {
         opacity: 0;
         transform: translateY(50px);
         transition: opacity 1s ease-out, transform 1s ease-out;
-        
+
 
         // 動畫觸發狀態
         &.about-fade-in {
@@ -1020,6 +1030,7 @@ video {
     text-align: center;
     padding-top: 2px;
 }
+
 .scroll-to-top {
     position: fixed;
     bottom: 40px;
@@ -1029,14 +1040,18 @@ video {
     background: transparent;
     cursor: pointer;
     padding: 0;
-    display: flex; /* 使用 flexbox 讓圖片和文字排在一起 */
-    align-items: center; /* 垂直置中對齊 */
+    display: flex;
+    /* 使用 flexbox 讓圖片和文字排在一起 */
+    align-items: center;
+    /* 垂直置中對齊 */
     height: 60px;
-    transition: width 0.3s ease, transform 0.3s ease; /* 懸停時寬度平滑變化 */
+    transition: width 0.3s ease, transform 0.3s ease;
+    /* 懸停時寬度平滑變化 */
 
     // 懸停時，讓按鈕的寬度擴大，以容納文字
     &:hover {
-        width: 170px; /* 根據文字長度調整寬度 */
+        width: 170px;
+        /* 根據文字長度調整寬度 */
         transform: translateY(-5px) scale(1.05);
     }
 
@@ -1052,7 +1067,7 @@ video {
         overflow: hidden;
         flex-shrink: 0; // **關鍵修改：防止在 flex 容器中被擠壓**
         overflow: hidden;
-        
+
         img {
             width: 80%;
             height: 80%;
@@ -1067,12 +1082,10 @@ video {
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                45deg,
-                rgba(255, 255, 255, 0) 0%,
-                rgba(255, 255, 255, 0.4) 50%,
-                rgba(255, 255, 255, 0) 100%
-            );
+            background: linear-gradient(45deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.4) 50%,
+                    rgba(255, 255, 255, 0) 100%);
             transform: translateX(-100%) translateY(-100%) rotate(45deg);
             pointer-events: none;
             opacity: 0.8;
@@ -1086,959 +1099,26 @@ video {
     }
 
     .scroll-text {
-        color: #777; /* 文字顏色 */
+        color: #777;
+        /* 文字顏色 */
         font-family: "Aboreto", system-ui;
         font-size: 16px;
         padding-left: 10px;
-        white-space: nowrap; /* 確保文字不會換行 */
-        opacity: 0; /* 預設隱藏文字 */
-        transform: translateX(-50px); /* 預設將文字向左移，讓它在按鈕外面 */
-        transition: opacity 0.3s ease, transform 0.3s ease; /* 讓文字的淡入和移動有平滑過渡 */
+        white-space: nowrap;
+        /* 確保文字不會換行 */
+        opacity: 0;
+        /* 預設隱藏文字 */
+        transform: translateX(-50px);
+        /* 預設將文字向左移，讓它在按鈕外面 */
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        /* 讓文字的淡入和移動有平滑過渡 */
     }
 
     // 當懸停在整個按鈕上時，讓文字出現
     &:hover .scroll-text {
-        opacity: 1; /* 顯示文字 */
-        transform: translateX(0); /* 將文字移回原位 */
+        opacity: 1;
+        /* 顯示文字 */
+        transform: translateX(0);
+        /* 將文字移回原位 */
     }
 }
-
-
-// @use 'reset';
-// @use 'var' as *;
-// @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Bubbler+One&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
-// // 特效
-
-
-
-// .homeall {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: flex-start;
-//     background-color: $background;
-//     height: 300vh;
-// }
-
-// .home-logo {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-
-//     .logo {
-//         padding-top: 15px;
-//         width: 100px;
-//         height: 100px;
-//     }
-// }
-
-// .main-nav {
-//     width: 100%;
-//     border: 1px solid #ECB8A9;
-//     background-color: $background;
-//     color: #ECB8A9;
-//     margin-bottom: 50px;
-// }
-
-// .home-p1 {
-//     background: linear-gradient(to bottom, $background, #d3907d);
-//     width: 100%;
-//     height: 120vh;
-//     border-bottom-left-radius: 120px;
-//     border-bottom-right-radius: 120px;
-//     position: relative;
-
-
-//     .home-bg {
-//         position: relative;
-//         max-width: 900px;
-//         width: 100%;
-//         margin: 0 auto;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         overflow: hidden;
-
-//         .bg {
-//             img {
-//                 padding: 15px;
-//                 border-radius: 999px;
-//             }
-//         }
-
-//         .p1-logo {
-//             position: absolute;
-//             z-index: 10;
-//             width: 150px;
-//             will-change: transform;
-//         }
-//     }
-
-//     .swim {
-//         margin-top: 50px;
-//         color: $background;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         font-family: "Aboreto", system-ui;
-//         font-weight: 400;
-//         font-style: normal;
-//     }
-
-//     .home-p1-photo {
-//         margin: 90px 0px 0px 0px;
-//         padding-bottom: 80px;
-//         display: flex;
-//         justify-content: center;
-//         gap: 65px;
-//         flex-wrap: wrap;
-//         border-bottom: 1px dashed #777;
-//         overflow-x: hidden;
-
-//     }
-
-//     .p1-framed {
-//         position: relative;
-//         width: 330px;
-//         display: grid;
-//         justify-items: center;
-
-
-//         .p1-img {
-//             width: 100%;
-//             height: 100%;
-//             object-fit: cover;
-//             border-bottom-left-radius: 400px;
-//         }
-
-//         .p0-overlay {
-//             position: absolute;
-//             z-index: 2;
-//             width: 130%;
-//             height: auto;
-//             bottom: 20%;
-//             left: -60%;
-//         }
-
-//         h3 {
-//             margin-top: 20px;
-//             word-spacing: 60px;
-//             text-align: right;
-//             color: #777;
-//             font-family: "Aboreto", system-ui;
-//             font-weight: 400;
-//             font-style: normal;
-//         }
-
-//         .btn1 {
-//             margin-top: 30px;
-//             width: 100%;
-//             width: 280px;
-//             height: 55px;
-//             border-radius: 50%;
-//             border: 2px solid #ECB8A9;
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-
-//             .top-1 {
-//                 font-size: 18px;
-//                 color: #d3907d;
-//                 width: 248px;
-//                 height: 46px;
-//                 border-radius: 50%;
-//                 border: 2px solid #ECB8A9;
-//                 display: flex;
-//                 justify-content: center;
-//                 align-items: center;
-
-//                 span {
-//                     letter-spacing: 2px;
-//                     font-family: "Aboreto", system-ui;
-//                     font-weight: 400;
-//                     font-style: normal;
-//                 }
-
-//                 .star-left {
-//                     color: #ECB8A9;
-//                     padding-right: 35px;
-//                     font-size: 14px;
-//                 }
-
-//                 .star-right {
-//                     color: #ECB8A9;
-//                     padding-left: 35px;
-//                     font-size: 14px;
-//                 }
-
-//             }
-
-//             :hover {
-//                 background-color: #d3907d;
-//                 color: #fff;
-
-//                 .star-left {
-//                     color: #fff;
-//                 }
-
-//                 .star-right {
-//                     color: #fff;
-//                 }
-//             }
-//         }
-
-//     }
-
-
-
-//     .p2-framed {
-//         width: 330px;
-//         display: grid;
-//         justify-items: center;
-
-//         img {
-//             width: 100%;
-//             height: 100%;
-//             object-fit: cover;
-//             border-top-left-radius: 400px;
-//             border-top-right-radius: 400px;
-//         }
-
-//         h3 {
-//             margin-top: 20px;
-//             word-spacing: 60px;
-//             text-align: center;
-//             color: #777;
-//             font-family: "Aboreto", system-ui;
-//             font-weight: 400;
-//             font-style: normal;
-//         }
-
-//         .btn2 {
-//             margin-top: 30px;
-//             width: 100%;
-//             width: 280px;
-//             height: 55px;
-//             border-radius: 50%;
-//             border: 2px solid #ECB8A9;
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-
-//             .top-2 {
-//                 font-size: 18px;
-//                 color: #d3907d;
-//                 width: 248px;
-//                 height: 46px;
-//                 border-radius: 50%;
-//                 border: 2px solid #ECB8A9;
-//                 display: flex;
-//                 justify-content: center;
-//                 align-items: center;
-
-//                 span {
-//                     letter-spacing: 2px;
-//                     font-family: "Aboreto", system-ui;
-//                     font-weight: 400;
-//                     font-style: normal;
-//                 }
-
-//                 .star-left {
-//                     color: #ECB8A9;
-//                     padding-right: 35px;
-//                     font-size: 14px;
-//                 }
-
-//                 .star-right {
-//                     color: #ECB8A9;
-//                     padding-left: 35px;
-//                     font-size: 14px;
-//                 }
-
-//             }
-
-//             :hover {
-//                 background-color: #d3907d;
-//                 color: #fff;
-
-//                 .star-left {
-//                     color: #fff;
-//                 }
-
-//                 .star-right {
-//                     color: #fff;
-//                 }
-//             }
-//         }
-//     }
-
-//     .p3-framed {
-//         position: relative;
-//         width: 330px;
-//         aspect-ratio: 330 / 461;
-//         display: grid;
-//         justify-items: center;
-
-//         .p3-img {
-//             width: 100%;
-//             height: 100%;
-//             object-fit: cover;
-//             border-top-right-radius: 400px;
-//         }
-
-//         .p0-overlay {
-//             position: absolute;
-//             z-index: 2;
-//             width: 130%;
-//             height: auto;
-//             top: 10%;
-//             right: -70%;
-//             transform: translateY(-50%);
-//         }
-
-//         h3 {
-//             margin-top: 20px;
-//             word-spacing: 60px;
-//             word-spacing: 60px;
-//             color: #777;
-//             font-family: "Aboreto", system-ui;
-//             font-weight: 400;
-//             font-style: normal;
-//         }
-
-//         .btn3 {
-//             margin-top: 30px;
-//             width: 100%;
-//             width: 280px;
-//             height: 55px;
-//             border-radius: 50%;
-//             border: 2px solid #ECB8A9;
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-
-//             .top-3 {
-//                 font-size: 18px;
-//                 color: #d3907d;
-//                 width: 248px;
-//                 height: 46px;
-//                 border-radius: 50%;
-//                 border: 2px solid #ECB8A9;
-//                 display: flex;
-//                 justify-content: center;
-//                 align-items: center;
-
-//                 span {
-//                     letter-spacing: 2px;
-//                     font-family: "Aboreto", system-ui;
-//                     font-weight: 400;
-//                     font-style: normal;
-//                 }
-
-//                 .star-left {
-//                     color: #ECB8A9;
-//                     padding-right: 35px;
-//                     font-size: 14px;
-//                 }
-
-//                 .star-right {
-//                     color: #ECB8A9;
-//                     padding-left: 35px;
-//                     font-size: 14px;
-//                 }
-
-//             }
-
-//             :hover {
-//                 background-color: #d3907d;
-//                 color: #fff;
-
-//                 .star-left {
-//                     color: #fff;
-//                 }
-
-//                 .star-right {
-//                     color: #fff;
-//                 }
-//             }
-//         }
-//     }
-
-//     .home-p1-photo a {
-//         text-decoration: none;
-//         color: inherit;
-//     }
-// }
-
-
-// .home-p2 {
-//     position: relative;
-//     width: 100%;
-//     height: 850px;
-//     border-bottom: 1px dashed #777;
-//     background-color: $background;
-//     margin-top: 150px;
-
-
-//     .p2-photo-1 {
-//         position: relative;
-//         z-index: 1;
-
-//         .p2-1 {
-//             position: absolute;
-//             width: 358px;
-//             height: 288px;
-//             z-index: 2;
-//             top: 100px;
-//         }
-
-//         .p2-2 {
-//             position: absolute;
-//             width: 331px;
-//             height: 439px;
-//             z-index: 1;
-//             left: 150px;
-//             top: 280px;
-//         }
-
-//         .p2-3 {
-//             position: absolute;
-//             width: 309px;
-//             height: 321px;
-//             z-index: 3;
-//             top: 200px;
-//             left: 320px;
-//             /* 範例：從 .home-p2 右邊向左移動 150px */
-//         }
-//     }
-
-//     .p2-photo-2 {
-//         position: relative;
-//         z-index: 2;
-
-//         .p2-2-1 {
-//             position: absolute;
-//             width: 350px;
-//             height: 225px;
-//             z-index: 1;
-//             top: -70px;
-//             right: 340px;
-//         }
-
-//         .p2-2-2 {
-//             position: absolute;
-//             width: 451px;
-//             height: 451px;
-//             z-index: 2;
-//             right: 00px;
-//             top: 50px;
-//         }
-
-//         .p2-2-3 {
-//             position: absolute;
-//             width: 261px;
-//             height: 150px;
-//             z-index: 3;
-//             top: 400px;
-//             right: 270px;
-//         }
-//     }
-
-//     .p2-text {
-//         position: relative;
-//         z-index: 3;
-
-//         .text-1 {
-//             position: absolute;
-//             font-size: 96px;
-//             font-family: "Bubbler One", sans-serif;
-//             font-weight: 400;
-//             font-style: normal;
-//             color: #F2A893;
-//             top: -15px;
-//             left: 360px;
-//         }
-
-//         .text-2 {
-//             position: absolute;
-//             font-family: "Bodoni Moda", serif;
-//             font-weight: 500;
-//             font-optical-sizing: auto;
-//             font-style: normal;
-//             color: #F2A893;
-//             font-size: 85px;
-//             top: 80px;
-//             left: 460px;
-//         }
-
-//         .text-3 {
-//             position: absolute;
-//             font-family: "Parisienne", cursive;
-//             font-weight: 400;
-//             font-style: normal;
-//             color: #F2A893;
-//             font-size: 96px;
-//             top: 80px;
-//             right: 550px;
-//         }
-
-//         .text-4 {
-//             position: absolute;
-//             font-family: "Bodoni Moda", serif;
-//             font-optical-sizing: auto;
-//             font-weight: 500;
-//             font-style: normal;
-//             color: #F2A893;
-//             font-size: 96px;
-//             top: 180px;
-//             right: 370px;
-//         }
-
-//         .text-5 {
-//             position: absolute;
-//             font-family: "Bodoni Moda", serif;
-//             font-optical-sizing: auto;
-//             font-weight: 500;
-//             font-style: normal;
-//             color: #F2A893;
-//             font-size: 110px;
-//             top: 480px;
-//             right: 450px;
-//         }
-
-//         .text-6 {
-//             position: absolute;
-//             font-size: 96px;
-//             font-family: "Bubbler One", sans-serif;
-//             font-weight: 400;
-//             font-style: normal;
-//             color: #F2A893;
-//             top: 600px;
-//             left: 400px;
-//         }
-
-//         .text-7 {
-//             position: absolute;
-//             font-family: "Parisienne", cursive;
-//             font-weight: 400;
-//             font-style: normal;
-//             color: #F2A893;
-//             font-size: 96px;
-//             top: 600px;
-//             right: 450px;
-
-//         }
-//     }
-
-//     .p2-btn {
-//         position: absolute;
-//         margin-top: 30px;
-//         width: 100%;
-//         width: 290px;
-//         height: 55px;
-//         border-radius: 50%;
-//         border: 2px solid #ECB8A9;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         top: 610px;
-//         right: 60px;
-
-//         .more {
-//             font-size: 18px;
-//             color: #d3907d;
-//             width: 260px;
-//             height: 46px;
-//             border-radius: 50%;
-//             border: 2px solid #ECB8A9;
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-
-//             span {
-//                 letter-spacing: 2px;
-//                 font-family: "Aboreto", system-ui;
-//                 font-weight: 400;
-//                 font-style: normal;
-//             }
-
-//             .star-left {
-//                 color: #ECB8A9;
-//                 padding-right: 25px;
-//                 font-size: 14px;
-//             }
-
-//             .star-right {
-//                 color: #ECB8A9;
-//                 padding-left: 25px;
-//                 font-size: 14px;
-//             }
-
-//         }
-
-//         :hover {
-//             background-color: #d3907d;
-//             color: #fff;
-
-//             .star-left {
-//                 color: #fff;
-//             }
-
-//             .star-right {
-//                 color: #fff;
-//             }
-//         }
-
-
-//     }
-
-//     .icon1 {
-//         width: 100px;
-//         height: 100px;
-//         position: relative;
-//         right: -280px;
-//         bottom: 50px;
-
-//         img {
-//             width: 100px;
-//         }
-//     }
-
-//     .icon2 {
-//         width: 200px;
-//         height: 200px;
-//         position: relative;
-//         top: 650px;
-//         z-index: 5;
-
-//         img {
-//             width: 200px;
-//         }
-//     }
-// }
-
-
-
-// .p3-video {
-//     position: relative;
-//     /* 關鍵：讓所有子元素都相對於此容器定位 */
-//     width: 100%;
-//     height: 700px;
-//     background-color: $background;
-// }
-
-// /* 影片樣式：讓影片填滿整個容器 */
-// .p3-video video {
-//     position: absolute;
-//     top: 175px;
-//     width: 100%;
-//     object-fit: cover;
-//     z-index: 1;
-//     /* 設定層級 */
-
-// }
-
-
-// /* 邊框樣式：精確置中並加上白色邊框 */
-// .border-video {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     width: 259px;
-//     /* 比 logo-video 寬 20px (239+20) */
-//     height: 203px;
-//     /* 比 logo-video 高 20px (183+20) */
-//     border: 2px solid white;
-//     /* 白色邊框 */
-//     z-index: 3;
-//     /* 在遮罩之上 */
-// }
-
-// /* Logo 容器：精確置中並加上背景色 */
-// .logo-video {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     width: 239px;
-//     height: 183px;
-//     background-color: #f7f3e8;
-//     /* 淺米色背景 */
-//     z-index: 4;
-//     /* 在邊框之上 */
-
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-
-// .logo-video img {
-//     width: 200px;
-// }
-
-
-
-// .video-overlay {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(255, 255, 255, 0.5);
-//     z-index: 1;
-//     /* 確保它在影片上面 */
-// }
-
-// video {
-//     width: 100%;
-//     object-fit: cover;
-//     /* 讓影片填滿容器 */
-// }
-
-// .social-icons {
-//     position: relative;
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: flex-end;
-//     gap: 15px;
-//     z-index: 5;
-//     top: 530px;
-//     padding-right: 15px;
-
-//     .ig {
-//         img {
-//             width: 50px;
-//         }
-//     }
-
-//     .fb {
-//         img {
-//             width: 50px;
-//         }
-//     }
-
-//     .line {
-//         img {
-//             width: 50px;
-//         }
-//     }
-// }
-
-// .home-p4 {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     position: relative;
-//     background-color: $background;
-//     padding-top: 150px;
-
-//     .about {
-//         padding-top: 40px;
-//         z-index: 1;
-//         background: linear-gradient(to bottom, #fce8e3, #ECB8A9);
-//         width: 524px;
-//         height: 556px;
-//         border-top-left-radius: 400px;
-//         border-top-right-radius: 400px;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: center;
-//     }
-
-//     .ourstory {
-//         position: absolute;
-//         top: 25%;
-//         left: 42%;
-//         transform: translate(-50%, -50%);
-//         z-index: 10;
-//     }
-
-//     .border-with-icon-container {
-//         display: flex;
-//         /* 啟用 Flexbox */
-//         align-items: center;
-//         /* 垂直置中對齊 */
-//         justify-content: center;
-//         /* 水平置中 */
-//         width: 374px;
-//         padding-top: 25px;
-//     }
-
-//     .left-border,
-//     .right-border {
-//         height: 1px;
-//         /* 邊框的高度 */
-//         background-color: #fff;
-//         /* 邊框的顏色 */
-//         width: 160px;
-//         /* 讓它填滿一半的空間 */
-//     }
-
-//     .icon-wrapper {
-//         margin: 0 15px;
-//         /* 圖示左右的間距 */
-//         /* 這裡可以設定圖示的額外樣式，例如圓角 */
-//     }
-
-//     .icon-on-border {
-//         width: 30px;
-//         /* 圖示的寬度 */
-//         height: 30px;
-//         /* 圖示的高度 */
-//     }
-
-//     p {
-//         color: white;
-//         font-family: "Aboreto", system-ui;
-//         font-weight: 400;
-//         font-style: normal;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         margin: 0 75px 15px 75px;
-//         /* 這裡的間距要和上面的一致 */
-//         padding: 10px 0 25px 0;
-//         font-size: 16px;
-//         line-height: 1.2;
-//         border-bottom: 1px solid #fff;
-//     }
-
-//     .about-photo {
-//         width: 40%;
-//     }
-
-//     .p4-photo {
-//         z-index: 2;
-//         width: 275px;
-//         height: 385px;
-//         position: absolute;
-//         left: 65%;
-//         bottom: 3.5%;
-//         overflow: hidden;
-
-//         img {
-//             border-top-left-radius: 400px;
-//             border-top-right-radius: 400px;
-//         }
-//     }
-// }
-
-// .footer {
-//     position: relative;
-//     /* 讓背景圖片能夠絕對定位在底部 */
-//     padding: 50px 0;
-//     /* 增加上下內距，避免內容太擠 */
-//     display: flex;
-//     /* 使用 Flexbox 排版 */
-//     justify-content: center;
-//     /* 讓內容水平置中 */
-//     align-items: center;
-//     /* 讓內容垂直置中 */
-//     min-height: 400px;
-// }
-
-// .footer::after {
-//     content: '';
-//     /* 偽元素必須要有 content 屬性 */
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(255, 255, 255, 0.7);
-//     /* 白色，透明度 70% */
-//     z-index: 2;
-//     /* 介於背景圖片和內容之間 */
-// }
-
-
-// .footer-content {
-//     display: flex;
-//     /* 讓文字和 email 容器可以左右排列 */
-//     justify-content: space-around;
-//     /* 讓兩個區塊平均分佈 */
-//     align-items: center;
-//     /* 垂直置中對齊 */
-//     width: 50%;
-//     /* 讓內容佔據 footer 的一部分寬度 */
-//     max-width: 1200px;
-//     /* 設定最大寬度，避免在寬螢幕上拉太開 */
-//     z-index: 3;
-//     /* 確保內容在背景圖片上方 */
-// }
-
-// .footer-links {
-//     text-align: left;
-//     font-family: "Aboreto", system-ui;
-//     font-weight: 400;
-//     font-style: normal;
-//     gap: 20px;
-//     display: flex;
-//     flex-direction: column;
-//     color: #262626;
-
-// }
-
-// .email-container {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     gap: 10px;
-
-// }
-
-// .email {
-//     border-radius: 999px;
-//     width: 300px;
-//     height: 35px;
-//     padding-left: 15px;
-//     border: 1px solid #777;
-//     font-size: 16px;
-//     font-family: "Aboreto", system-ui;
-//     font-weight: 400;
-//     font-style: normal;
-// }
-
-// .bg-bottom {
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     z-index: 1;
-//     /* 將背景圖片放在最底層 */
-// }
-
-// .subscribe-btn {
-//     font-family: "Aboreto", system-ui;
-//     font-weight: 400;
-//     font-style: normal;
-//     display: flex;
-//     background-color: #ECB8A9;
-//     color: #fff;
-//     border-radius: 999px;
-//     padding: 5px 15px 5px 15px;
-//     font-size: 16px;
-// }
-
-// .bg-bottom img {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-// }
-
-// .copy {
-//     width: 100%;
-//     height: 30px;
-//     background-color: #C5CFBD;
-//     color: #fff;
-//     text-align: center;
-//     padding-top: 2px;
-// }
